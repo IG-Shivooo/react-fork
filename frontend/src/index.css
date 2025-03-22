@@ -1,0 +1,17 @@
+/* global css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #faf3f3;
+  color: #262626;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
