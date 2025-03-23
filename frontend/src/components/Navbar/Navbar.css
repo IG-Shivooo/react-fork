@@ -1,75 +1,83 @@
-/* Navbar.css */
 .navbar {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  padding: 2px 15px; /* Navbar slim */
+  background-color: #1a2332;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Left - Logo Section */
+/* Logo section */
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-/* Logo size increased */
 .logo {
-  width: 80px; /* Increased width */
-  height: 80px; /* Increased height */
+  height: 24px;
+  margin-right: 8px;
 }
 
-/* Logo Text - Bigger and bolder */
 .logo-text {
-  font-size: 24px;
-  font-weight: 800;
-  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
-/* Right - Buttons and Icon */
-.nav-links {
+/* Navigation menu */
+.nav-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
-/* Navbar links - white color */
-.nav-links a {
-  font-size: 16px;
-  color: #fff;
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 8px 0;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sign-in-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: background-color 0.2s;
 }
 
-/* Register & Login Buttons - Bigger, Oval Shape */
-.btn {
-  padding: 10px 24px;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  background: transparent;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.sign-in-btn:hover {
+  background-color: #1d4ed8;
 }
 
-.btn:hover {
-  background: #fff;
-  color: #bc1888; /* Using one of the gradient colors */
-}
-
-/* Profile Icon - Same Style */
+/* Keep existing user icon styles */
 .user-icon {
   display: flex;
   align-items: center;
 }
 
 .icon-circle {
-  width: 50px; /* Slightly bigger */
+  width: 50px; 
   height: 50px;
   background: #f0f0f0;
   border: 2px solid #ccc;
@@ -78,7 +86,7 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #bc1888; /* Matching with the gradient accent */
+  color: #bc1888; 
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -87,21 +95,34 @@
   background: #e0e0e0;
 }
 
-/* Responsive Logo Size for Mobile */
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none; /* Hide menu items on small screens */
+  }
+  
+  .navbar {
+    padding: 0 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .logo {
-      width: 60px; /* Smaller for mobile */
-      height: 60px;
+    height: 20px;
   }
+  
   .logo-text {
-      font-size: 18px;
+    font-size: 16px;
   }
-  .btn {
-      padding: 8px 16px;
-      font-size: 14px;
+  
+  .sign-in-btn {
+    padding: 6px 12px;
+    font-size: 13px;
   }
+  
   .icon-circle {
-      width: 40px;
-      height: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }

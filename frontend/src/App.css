@@ -13,7 +13,7 @@ body {
 /* Main container for both boxes */
 .container {
   display: flex;
-  gap: 30px; /* Gap between boxes */
+  gap: 30px; 
 }
 
 /* Common style for login and register */
@@ -26,12 +26,12 @@ body {
   text-align: center;
 }
 
-/* Heading style */
+
 h2 {
   margin-bottom: 20px;
 }
 
-/* Input style */
+
 input {
   width: 100%;
   padding: 10px;
@@ -40,7 +40,7 @@ input {
   border-radius: 4px;
 }
 
-/* Button style */
+
 button {
   width: 100%;
   padding: 10px;

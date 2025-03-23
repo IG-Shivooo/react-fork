@@ -37,24 +37,6 @@ function Dashboard() {
           <div className="username">{username}</div>
           <div className="bio">{bio}</div>
         </div>
-
-        {/* Stats Section Like IG */}
-        <div className="stats">
-          <div className="stat-item">
-            <span>12</span>
-            <label>Posts</label>
-          </div>
-          <div className="stat-item">
-            <span>120</span>
-            <label>Followers</label>
-          </div>
-          <div className="stat-item">
-            <span>150</span>
-            <label>Following</label>
-          </div>
-        </div>
-
-        {/* Button like Edit Profile */}
         <button className="logout-button" onClick={handleLogout}>
           Logout
         </button>

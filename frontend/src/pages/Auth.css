@@ -1,81 +1,229 @@
-.auth-container {
-  width: 400px;
-  max-width: 90%;
-  margin: 50px auto;
-  padding: 30px 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+/* Main layout */
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
 }
 
-.auth-container h2 {
-  text-align: center;
+/* Features sidebar */
+.features-sidebar {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
   margin-bottom: 20px;
-  color: #333;
 }
 
-.auth-container form input,
-.auth-container form button {
+.feature-icon {
+  font-size: 24px;
+  color: #2563eb;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.feature-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Auth form container */
+.auth-form-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.auth-form-wrapper {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  transition: all 0.3s ease;
-  box-sizing: border-box; /* ensures inputs don't overflow */
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 30px;
 }
 
-.auth-container form input {
-  background-color: #f9f9f9;
+.auth-form-wrapper h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.auth-container form input:focus {
-  border-color: #f09433; /* Instagram gradient start color */
-  box-shadow: 0 0 5px rgba(240, 148, 51, 0.3);
+/* Form styling */
+.form-group {
+  margin-bottom: 16px;
 }
 
-/* Centered, rounded submit button with Instagram gradient */
-.auth-container form button {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 25px; /* fully rounded shape */
-  width: 50%;        /* narrower for centering */
-  margin: 0 auto;    /* centers button horizontally */
+.form-group label {
   display: block;
-  transition: all 0.3s ease;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.auth-container form button:hover {
-  opacity: 0.9;
-  transform: none; /* no scaling */
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1e293b;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.forgot-password a {
+  color: #2563eb;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
 }
 
 .auth-toggle {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 16px;
   font-size: 14px;
+  color: #64748b;
 }
 
 .auth-toggle a {
-  color: #f09433; /* matching Instagram accent */
+  color: #2563eb;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .auth-toggle a:hover {
   text-decoration: underline;
 }
 
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  color: #94a3b8;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* Social login */
+.social-login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.social-button {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.social-button:hover {
+  background-color: #f8fafc;
+}
+
+.github {
+  color: #333333;
+}
+
+.gitlab {
+  color: #fc6d26;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.facebook {
+  color: #1877f2;
+}
+
 /* Responsive adjustments */
-@media (max-width: 600px) {
-  .auth-container {
+@media (max-width: 900px) {
+  .auth-page {
+    flex-direction: column;
+  }
+  
+  .features-sidebar,
+  .auth-form-container {
+    width: 100%;
     padding: 20px;
   }
   
-  .auth-container form button {
-    width: 70%;
+  .auth-form-wrapper {
+    max-width: 100%;
   }
 }

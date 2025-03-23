@@ -24,17 +24,23 @@ function Navbar() {
       <div className="nav-logo">
         <img src={logo} alt="Logo" className="logo" />
         <Link to="/" className="logo-text">
-          Skill Bridge
+          DevJobs
         </Link>
       </div>
 
-      {/* Right Section - Links + Icon */}
-      <div className="nav-links">
-        <Link to="/register" className="btn register-btn">
-          Register
-        </Link>
-        <Link to="/login" className="btn login-btn">
-          Login
+      {/* Center Section - Navigation Links */}
+      <div className="nav-menu">
+        <Link to="/jobs" className="nav-item">Jobs</Link>
+        <Link to="/projects" className="nav-item">Projects</Link>
+        <Link to="/your-jobs" className="nav-item">Your Jobs</Link>
+        <Link to="/resume" className="nav-item">Resume</Link>
+        <Link to="/job-alert" className="nav-item">Job Alert</Link>
+      </div>
+
+      {/* Right Section - Sign In + User Icon */}
+      <div className="nav-right">
+        <Link to="/login" className="sign-in-btn">
+          Sign In
         </Link>
         <div className="user-icon">
           <Link to="/dashboard">
