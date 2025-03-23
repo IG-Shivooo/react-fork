@@ -4,10 +4,10 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background: #faf3f3;
+  background: #f8fafc;
+
 }
 
-/* Card like Instagram Profile */
 .card {
   width: 400px;
   max-width: 90%;
@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-/* User Info like Instagram */
+
 .user-info {
   display: flex;
   flex-direction: column;
@@ -26,11 +26,10 @@
   margin-bottom: 20px;
 }
 
-/* Instagram Style Avatar */
 .avatar {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background: linear-gradient(135deg, #001f3f 35%, #f27972);
   border: 4px solid #fff;
   border-radius: 50%;
   font-size: 40px;
@@ -43,7 +42,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Username Bold */
 .username {
   font-size: 22px;
   font-weight: bold;
@@ -51,38 +49,12 @@
   margin-bottom: 5px;
 }
 
-/* Bio Style */
 .bio {
   font-size: 14px;
   color: #777;
   margin-bottom: 15px;
 }
 
-/* Stats Section */
-.stats {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-item span {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-
-.stat-item label {
-  font-size: 14px;
-  color: #777;
-}
-
-/* Edit Profile Button */
 .logout-button {
   padding: 10px 24px;
   background: #efefef;
@@ -113,15 +85,6 @@
 
   .username {
     font-size: 18px;
-  }
-
-  .stats {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stat-item {
-    margin-bottom: 10px;
   }
 
   .logout-button {

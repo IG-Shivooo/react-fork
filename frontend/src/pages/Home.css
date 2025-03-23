@@ -1,0 +1,61 @@
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh; 
+    background: linear-gradient(180deg, #001f3f 55%, #f27972); 
+    color: white; 
+    padding: 0 50px;}
+  
+  
+  .content {
+    max-width: 600px; 
+    margin-top: 200px; 
+}
+
+  
+  .job-search-input {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .find-jobs-button {
+    padding: 15px 30px;
+    background-color: #0056b3; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .find-jobs-button:hover {
+    background-color: #004080; 
+  }
+  
+  .image-container {
+    flex: 1; /* Allow the image container to grow */
+  }
+  
+  .man-image {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: 100vh; /* Maintain aspect ratio */
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column; 
+      text-align: center; 
+    }
+  
+    .image-container {
+      margin-top: 20px; 
+    }
+  
+    .job-search-input, .find-jobs-button {
+      width: 90%;
+    }
+  }
+  
