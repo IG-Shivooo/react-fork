@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import './Auth.css';
+import '../auth/Auth.css';
 
 // Get API URL from environment variables
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
-function Login() {
+function Register() {
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -14,17 +15,17 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${API_URL}/api/auth/login`, {
+      const response = await axios.post(`${API_URL}/api/auth/register`, {
+        username,
         email,
         password,
       });
-      console.log('Login response:', response.data);
-      localStorage.setItem('token', response.data.token);
-      localStorage.setItem('user', JSON.stringify(response.data.user));
-      navigate('/dashboard');
+      console.log('Register response:', response.data);
+      alert(response.data.message);
+      navigate('/login');
     } catch (error) {
-      console.error('Login error:', error.response?.data || 'Error occurred');
-      alert(error.response?.data?.message || 'Login failed');
+      console.error('Register error:', error.response?.data || 'Error occurred');
+      alert(error.response?.data?.message || 'Registration failed');
     }
   };
 
@@ -55,11 +56,20 @@ function Login() {
         </div>
       </div>
 
-      {/* Login Form */}
+      {/* Registration Form */}
       <div className="auth-form-container">
         <div className="auth-form-wrapper">
-          <h2>Login</h2>
+          <h2>Sign Up</h2>
           <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label>Username</label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
             <div className="form-group">
               <label>E-Mail</label>
               <input
@@ -78,33 +88,15 @@ function Login() {
                 required
               />
             </div>
-            <div className="forgot-password">
-              <Link to="/forgot-password">Forgot Password?</Link>
-            </div>
-            <button type="submit" className="primary-button">Login</button>
+            <button type="submit" className="primary-button">Sign Up</button>
           </form>
-          
           <p className="auth-toggle">
-            Don't have an account yet? <Link to="/register">Sign up here</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </p>
-          
-          <div className="divider">
-            <span>or</span>
-          </div>
-          
-          <div className="social-login">
-            <button className="social-button google">
-              <span>Google</span>
-            </button>
-            <button className="social-button github">
-              <span>Github</span>
-            </button>
-            
-          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;

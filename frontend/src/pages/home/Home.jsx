@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css'; // Include your CSS file
-import manWithLaptop from '../assets/hero image.svg'; 
+import manWithLaptop from '../../assets/hero image.svg'; 
 
 function Home() {
   return (
